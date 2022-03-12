@@ -8,21 +8,37 @@ const url_parser = body_parser.urlencoded({ extended: false });
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 const URI = process.env.Mongo_URI;
-mongoose.connect(URI, { useNewUrlParser: true });
+mongoose.connect(
+  "mongodb+srv://sneha123:sneha123@cluster0.givdm.mongodb.net/credentials?retryWrites=true&w=majority",
+  { useNewUrlParser: true }
+);
 const connection = mongoose.connection;
 connection.once("open", () => {
   console.log("MongoDB connected");
 });
 const formschema = {
   GarbageId: String,
-  Latitude: String,
-  Longitude: String,
-  Amount: String,
+  Latitude: Number,
+  Longitude: Number,
+  Amount: Number,
 };
 const Note = mongoose.model("note", formschema);
 
-app.get("/", (req, res) => {
+app.get("/open", (req, res) => {
   res.render("signup");
+});
+app.get("/", (req, res) => {
+  res.sendFile(__dirname + "/public/index.html");
+});
+app.get("/view", (req, res) => {
+  Note.find({}, (err, docs) => {
+    if (err) res.json(err);
+    else {
+      console.log(docs);
+      /*res.render("index", { notes: docs });*/
+      res.send(docs);
+    }
+  });
 });
 app.post(
   "/result",
