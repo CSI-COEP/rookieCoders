@@ -63,7 +63,7 @@ app.post(
         Amount: req.body.amount,
       });
       newNote.save();
-      res.alert(
+      res.send(
         '<script type="text/javascript"> alert("data added Successfully");window.location.href="http://localhost:5001/open"; </script>'
       );
     }
