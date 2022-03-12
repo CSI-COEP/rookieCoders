@@ -26,14 +26,20 @@ body {
   flex-direction: column;
   background-color: rgba(0, 128, 0, 1);
 }
+.containerr .button{
+  display: inline;
 
+}
 #map {
   margin: 10px 20px;
   height: 80vh;
   width: 85vw;
   box-shadow: 0 0 10px 5px #fff;
 }
+.form{
+  display: inline-block;
 
+}
 .button {
   padding: 0.7rem 1.2rem;
   margin: 10px;
@@ -42,6 +48,9 @@ body {
   color: white;
   font-weight: 700;
   font-size: 1.5rem;
+  border-radius: 10px;
+  display: inline-block;
+
 }
 
 .button:hover {
