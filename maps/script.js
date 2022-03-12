@@ -18,6 +18,14 @@ function initMap() {
         ["Full Bin!!", 18.48098, 73.72941, "images/red.png", 75, 60],
         ["Half filled Bin!!", 18.60955, 73.84614, "images/yellow.png", 35, 40],
         ["Empty Bin!!", 18.45883, 73.92717, "images/green.png", 60, 40],
+        ["Full Bin!!", 18.57618, 73.96486, "images/red.png", 75, 60],
+        ["Half filled Bin!!", 18.50247, 73.92787, "images/yellow.png", 35, 40],
+        ["Empty Bin!!", 18.46978, 73.96738, "images/green.png", 60, 40],
+        ["Full Bin!!", 18.45227, 73.92183, "images/red.png", 75, 60],
+        ["Half filled Bin!!", 18.50795, 73.79789, "images/yellow.png", 35, 40],
+        ["Empty Bin!!", 18.57891, 73.90466, "images/green.png", 60, 40],
+        ["Full Bin!!", 18.52098, 73.74124, "images/red.png", 75, 60],
+        ["Half filled Bin!!", 18.50177, 73.87307, "images/yellow.png", 35, 40],
     ]
 
     for (let i = 0; i < markers.length; i++) {
