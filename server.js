@@ -63,7 +63,7 @@ app.post(
         Amount: req.body.amount,
       });
       newNote.save();
-      res.send("<h1>Data added to the database!!</h1>");
+      res.send({ message: "data added to database" });
     }
   }
 );

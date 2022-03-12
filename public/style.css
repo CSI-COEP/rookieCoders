@@ -13,7 +13,7 @@ html{
     box-sizing: inherit;
 }
 h1{
- color:#000000;
+ color: #fff;
 }
 
 body{
@@ -28,7 +28,23 @@ body{
 #map{
     margin: 10px 20px;
     height: 80vh;
-    width: 79vw;
+    width: 85vw;
     box-shadow: 0 0 10px 5px #fff;
 
+}
+
+.button {
+    padding: 0.7rem 1.2rem;
+    margin: 10px;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.button:hover{
+    background-color: #fff;
+    color: green;
+    transition: 0.5s;
 }
