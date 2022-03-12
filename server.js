@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 const { check, validationResult } = require("express-validator");
 const url_parser = body_parser.urlencoded({ extended: false });
 app.set("view engine", "ejs");
-app.use(express.static("public"));
+app.use(express.static("welcomepage"));
 const URI = process.env.Mongo_URI;
 mongoose.connect(
   "mongodb+srv://sneha123:sneha123@cluster0.givdm.mongodb.net/credentials?retryWrites=true&w=majority",
@@ -27,8 +27,11 @@ const Note = mongoose.model("note", formschema);
 app.get("/open", (req, res) => {
   res.render("signup");
 });
-app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/public/index.html");
+app.get("/map", (req, res) => {
+  res.sendFile(__dirname + "/welcomePage/indexmap.html");
+});
+app.get("/thankyou", (req, res) => {
+  res.sendFile(__dirname + "/WelcomePage/indexty.html");
 });
 app.get("/view", (req, res) => {
   Note.find({}, (err, docs) => {
@@ -50,22 +53,57 @@ app.post(
     check("amount", "Amount must be numeric").isNumeric(),
   ],
   (req, res) => {
-    //console.log(req.body);
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       const alert = errors.array();
       res.render("signup", { alert });
     } else {
-      let newNote = new Note({
-        GarbageId: req.body.id,
-        Latitude: req.body.lat,
-        Longitude: req.body.long,
-        Amount: req.body.amount,
+      const { id } = req.body;
+      Note.findOne({ GarbageId: id }, (err, data) => {
+        if (data) {
+          Note.findOneAndUpdate(
+            { GarbageId: req.body.id },
+            {
+              $set: {
+                GarbageId: req.body.id,
+                Latitude: req.body.lat,
+                Longitude: req.body.long,
+                Amount: req.body.amount,
+              },
+            },
+            { new: true },
+            (err, doc) => {
+              if (err) {
+                console.log("Something wrong when updating data!");
+              }
+              console.log("documant");
+              console.log(doc);
+              doc.save();
+
+              res.send(
+                '<script type="text/javascript"> alert("Record updated Successfully");window.location.href="http://localhost:5001/thankyou"; </script>'
+              );
+            }
+          );
+        } else {
+          const newNote = new Note({
+            GarbageId: req.body.id,
+            Latitude: req.body.lat,
+            Longitude: req.body.long,
+            Amount: req.body.amount,
+          });
+
+          newNote.save((err) => {
+            if (err) {
+              res.send(err);
+            } else {
+              res.send(
+                '<script type="text/javascript"> alert("Data Added Successfully");window.location.href="http://localhost:5001/thankyou"; </script>'
+              );
+            }
+          });
+        }
       });
-      newNote.save();
-      res.send(
-        '<script type="text/javascript"> alert("data added Successfully");window.location.href="http://localhost:5001/open"; </script>'
-      );
     }
   }
 );
