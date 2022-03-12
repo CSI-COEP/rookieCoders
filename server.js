@@ -41,7 +41,7 @@ app.get("/view", (req, res) => {
   });
 });
 app.post(
-  "/result",
+  "/open",
   url_parser,
   [
     check("id", "garbage id must be numeric data only").exists().isNumeric(),
@@ -63,7 +63,9 @@ app.post(
         Amount: req.body.amount,
       });
       newNote.save();
-      res.send({ message: "data added to database" });
+      res.alert(
+        '<script type="text/javascript"> alert("data added Successfully");window.location.href="http://localhost:5001/open"; </script>'
+      );
     }
   }
 );
