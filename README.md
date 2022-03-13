@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# Garbo-Smart
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Problem Statement : Cleanliness and Sustainability
 
-## Available Scripts
+#### Why this problem statement?
 
-In the project directory, you can run:
+- In India, cleanliness is a major issue, because of lack of hygeinic environment it becomes a breeding ground for various diseases which in turn 
+takes a toll on human health.
+- So, we came up with an idea, so that we can efficiently use dustbins and also make their cleaning process efficient by the use of our web app.
 
-### `npm start`
+#### How to use app? 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- For compiling : 
+``` npm i ```
+- Then : 
+``` npm start ```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### ScreenShots
+- Welcome Page
+<img width="750" height="380" alt="2022-03-13" src="https://user-images.githubusercontent.com/76548605/158047574-1115ef19-1887-4451-afbd-bd4a4112ffae.png">
 
-### `npm test`
+- About Us
+<img width="750" height="380" alt="2022-03-13 (1)" src="https://user-images.githubusercontent.com/76548605/158047611-0cfce960-c6cf-4ecf-bcb2-97bc9d32b5e2.png">
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Add Details Page
+<img width="750" height="380" alt="2022-03-13 (4)" src="https://user-images.githubusercontent.com/76548605/158047626-d14cd07c-43b1-4573-82d6-9c9293302046.png">
 
-### `npm run build`
+- Thank You Page
+<img width="750" height="380" alt="2022-03-13 (5)" src="https://user-images.githubusercontent.com/76548605/158047645-112a604a-c019-4d5b-8611-9033287c49ff.png">
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Map Page
+<img width="750" height="380" alt="2022-03-13 (3)" src="https://user-images.githubusercontent.com/76548605/158047671-e515565a-c408-46d8-8fa1-6ccf87215937.png">
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Built With
+<p float = "left">
+<img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white"/>
+<img src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white"/>
+<img src="https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white"/>
+<img src = "https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/>  
+<img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" />
+<img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" />
+</p>
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### Contributors
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- [Ritesh Narendra Chaudhari](https://github.com/Ritesh2408)
+- [Sneha Venkateswaran](https://github.com/sneha-0723)
+- [Adnan Shaikh](https://github.com/Adnansk01)
+- [Ananya Patil](https://github.com/ananya86)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+##### Thank You
