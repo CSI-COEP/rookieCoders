@@ -47,10 +47,13 @@ app.post(
   "/open",
   url_parser,
   [
-    check("id", "garbage id must be numeric data only").exists().isNumeric(),
+    check("id", "garbage id must be numeric data only").exists(),
     check("lat", "latitude must be numeric").isNumeric(),
     check("long", "Longitude must be numeric").isNumeric(),
-    check("amount", "Amount must be numeric").isNumeric(),
+    check("amount", "Amount must be a valid percentage").isFloat({
+      min: 0,
+      max: 100,
+    }),
   ],
   (req, res) => {
     const errors = validationResult(req);
